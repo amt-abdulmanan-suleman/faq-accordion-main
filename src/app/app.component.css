@@ -1,0 +1,62 @@
+.background{
+    background-image: url('../assets/images/background-pattern-desktop.svg');
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: hsl(275, 100%, 97%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    padding: 25px;
+    width: 43%;
+    border-radius: 10px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.description{
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+.description:last-child{
+    border: none;
+}
+.description_question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.description_question p:hover{
+    color: #AD28EB;
+}
+
+.description_question p{
+    color: hsl(292, 42%, 14%);
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.description_answer{
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: hsl(292, 16%, 49%);
+}
+.hidden{
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        width: 80%;
+    }
+    .background{
+        background-image: url('../assets/images/background-pattern-mobile.svg');
+    }
+}

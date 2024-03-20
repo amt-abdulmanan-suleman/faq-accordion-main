@@ -1,0 +1,19 @@
+<div class="background">
+  <div class="container">
+    <div class="header">
+      <img src="../assets/images/icon-star.svg" alt="">
+      <h1>FAQs</h1>
+    </div>
+    @for (faq of faqs; track faq.id) {
+    <div class="description">
+      <div class="description_question" (click)="toggle($index)">
+        <p>{{faq.question}}</p>
+        <button><img [src]="isActive($index) ? '../assets/images/icon-minus.svg' : '../assets/images/icon-plus.svg'" alt=""></button>
+      </div>
+      <div class="description_answer" [ngClass]="{ 'hidden': !isActive($index) }">
+        <p>{{faq.answer}}</p>
+      </div>
+    </div>
+  }
+  </div>
+</div>
